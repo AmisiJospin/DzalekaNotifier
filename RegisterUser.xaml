@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             Title="Register"
+             x:Class="DzalekaNotifierFinal.RegisterUser">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image x:Name="backgroundImage" Opacity="0.3" Aspect="Fill" />
+            <ScrollView>
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label TextColor="#4c466c" FontAttributes="Bold" FontSize="25" Text="USER REGISTRATION" Margin="30,20,30,10" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+
+                    <StackLayout  VerticalOptions="EndAndExpand" Grid.Row="1">
+                        <StackLayout x:Name="choosePhoto" HorizontalOptions="Center" Margin="30,0,30,10">
+                            <controls:CircleImage x:Name="PictureBox" HeightRequest="100" WidthRequest="100" Aspect="Fill" HorizontalOptions="Center" />
+                            <Button TextColor="#4c466c" x:Name="browserBtn" Clicked="browserBtn_Clicked" BackgroundColor="Transparent" FontAttributes="Bold" Text="Choose Photo" HorizontalOptions="Center" />
+                        </StackLayout>
+
+                        <Entry x:Name="NameBox" 
+                             Placeholder="Name"
+                           BackgroundColor="White"
+                             />
+
+                        <Entry x:Name="UserNameBox" 
+                             Placeholder="User Name"
+                            BackgroundColor="White"
+                             />
+
+                        <Entry x:Name="EmailBox" 
+                           Placeholder="E-Mail" 
+                            BackgroundColor="White"
+                             />
+
+                        <Entry x:Name="phoneNumberBox"
+                           Text="+265"
+                             Keyboard="Telephone"
+                            BackgroundColor="White"
+                             />
+
+                        <Picker x:Name="AdressBox">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String x:Name="defaultGender">Location</x:String>
+                                    <x:String x:Name="kawale">Kawale</x:String>
+                                    <x:String x:Name="likuni">Likuni</x:String>
+                                    <x:String x:Name="lis">Lisungwe</x:String>
+                                    <x:String x:Name="ka">Karonga</x:String>
+                                    <x:String x:Name="za">Zomba</x:String>
+                                    <x:String x:Name="bt">Blantyre</x:String>
+                                    <x:String x:Name="kz">Katudza</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                            <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                        </Picker>
+                        <Entry x:Name="question1" 
+                                 Placeholder="Name Your Favorite Pet" 
+                            BackgroundColor="White"
+                              />
+                        <Entry x:Name="question2" 
+                                 Placeholder="Favorite Food" 
+                            BackgroundColor="White"
+                              />
+                        <Entry x:Name="question3" 
+                                 Placeholder="Favorite Singer" 
+                            BackgroundColor="White"
+                              />
+
+                        <Entry x:Name="passwordBox" 
+                                 Placeholder="Password" 
+                                 IsPassword="True"
+                            BackgroundColor="White"
+                              />
+                        <Entry x:Name="passwordBox2" 
+                           IsPassword="True"
+                            Placeholder="Confirm password" 
+                            BackgroundColor="White"
+                              />
+
+                        <Grid>
+                            <Button x:Name="RegisterButton" FontAttributes="Bold" BackgroundColor="#4c466c" TextColor="White" Text="Register" Clicked="RegisterButton_Clicked" HorizontalOptions="FillAndExpand"  HeightRequest="100"/>
+                            <ActivityIndicator x:Name="loadingImage" Color="White" WidthRequest="50" HeightRequest="50" IsRunning="False" IsVisible="False" HorizontalOptions="Center" />
+                        </Grid>
+                    </StackLayout>
+
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

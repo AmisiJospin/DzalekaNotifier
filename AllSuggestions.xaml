@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="All Suggestions"
+             x:Class="DzalekaNotifierFinal.AllSuggestions">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+
+
+            <Image x:Name="backgroundImage" Opacity="0.30" Aspect="Fill" />
+
+           
+
+                <StackLayout x:Name="contentHolder" />
+
+           
+
+            <!--<Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="All Suggestions" TextColor="#4c466c" HorizontalOptions="Center" FontSize="25" Grid.Row="0" />
+
+            
+
+            -->
+            <!--<ListView Margin="10" Grid.Row="1" x:Name="allSuggestions" ItemSelected="allSuggestions_ItemSelected">
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <ViewCell.View>
+
+                                <Grid x:Name="titleHolder" VerticalOptions="Center" Margin="5">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <BoxView Grid.RowSpan="3" WidthRequest="5" BackgroundColor="White" />
+
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Sender}" FontSize="25" TextColor="White" />
+
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Title}" FontSize="18" TextColor="White" />
+
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding Date}" FontSize="13" TextColor="White" />
+
+                                </Grid>
+
+                            </ViewCell.View>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+
+            </ListView>-->
+            <!--
+
+            <Label Text="© Dzaleka Notifier - 2018" TextColor="#4c466c" FontSize="18" HorizontalOptions="Center" Grid.Row="2" Margin="5" />
+
+        </Grid>-->
+
+                <ActivityIndicator x:Name="loadingImage" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsVisible="False" IsRunning="False" HorizontalOptions="CenterAndExpand" />
+
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

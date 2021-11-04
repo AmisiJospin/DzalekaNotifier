@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="DzalekaNotifierFinal.MoreOfficeDetails">
+    <ContentPage.Content>
+        <Grid>
+            <Image x:Name="backgroundImage" Opacity="0.3" Aspect="AspectFill" />
+            <StackLayout>
+                <Label x:Name="OrgNameText" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="#4c466c" Margin="10" />
+                <controls:CircleImage x:Name="PictureOffice" HeightRequest="80" WidthRequest="80" Aspect="AspectFit" Margin="5" />
+                
+                <ScrollView>
+                    <StackLayout Padding="10">
+                        <Label x:Name="titleLB" TextColor="#4c466c"/>
+                        <Label x:Name="detailsLB" Margin="0,10,0,0" TextColor="#4c466c"/>
+                    </StackLayout>
+                </ScrollView>
+                
+            </StackLayout>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

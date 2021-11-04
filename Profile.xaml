@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:control="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="DzalekaNotifierFinal.Profile"
+             Title="Profile"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Image x:Name="backgroundImage" Opacity="0.30" Aspect="Fill" />
+
+            <ScrollView>
+
+                <StackLayout Padding="10">
+                    <StackLayout>
+                        <Label Text="Reset Password" TextColor="#4c466c" x:Name="resetLabel" HorizontalOptions="EndAndExpand" FontAttributes="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="reset" Tapped="reset_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                   
+                    <Grid VerticalOptions="CenterAndExpand" Margin="0,-40,0,0">
+                       
+                        <StackLayout >
+                           
+                            <control:CircleImage x:Name="profileImage"
+                                          HorizontalOptions="CenterAndExpand"
+                                          Margin="0,20,0,-50"
+                                          Grid.Row="1"
+                                          HeightRequest="100"
+                                          WidthRequest="100"/>
+
+                            <Label x:Name="name"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,50,0,8"
+                           TextColor="#4c466c"
+                           FontAttributes="Bold"
+                                   FontSize="20"/>
+                            
+                            <Grid HorizontalOptions="CenterAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Row="0" Grid.Column="0" x:Name="LocationImage" Source="location.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="EndAndExpand" Margin="0,0,60,0"/>
+                                <Label Grid.Row="0" Grid.Column="1" x:Name="Location" HorizontalOptions="StartAndExpand" />
+
+                                <Image Grid.Row="1" Grid.Column="0" x:Name="EmailAdressImage" Source="email.png" HeightRequest="20" WidthRequest="20"  HorizontalOptions="EndAndExpand" Margin="0,0,60,0"/>
+                                <Label Grid.Row="1" Grid.Column="1" x:Name="Email"  HorizontalOptions="StartAndExpand" />
+
+                                <Image Grid.Row="2" Grid.Column="0" x:Name="PhoneNumberImage" Source="call.png" HeightRequest="20" WidthRequest="20"  HorizontalOptions="EndAndExpand" Margin="0,0,60,0"/>
+                                <Label Grid.Row="2" Grid.Column="1" x:Name="PhoneNumber"  HorizontalOptions="StartAndExpand" />
+
+
+
+                            </Grid>
+                        </StackLayout>
+
+
+
+                    </Grid>
+
+                    <StackLayout Margin="10">
+
+
+
+                        <Grid>
+                            <StackLayout x:Name="resetPasswordPanel"
+                                     IsVisible="False">
+
+                                <Entry x:Name="oldPasswordEntry"
+                                   Placeholder="Old Password"
+                                   IsPassword="True"
+                                   Margin="20"
+                                   VerticalOptions="CenterAndExpand" />
+
+                                <Entry x:Name="newPasswordEntry"
+                                   Placeholder="New Password"
+                                   IsPassword="True"
+                                   Margin="20"
+                                   VerticalOptions="CenterAndExpand" />
+
+                                <Entry x:Name="confirmPasswordEntry"
+                                   Placeholder="Confirm Password"
+                                   IsPassword="True"
+                                   Margin="20"
+                                   VerticalOptions="CenterAndExpand" />
+
+                                <Button x:Name="savePasswordButton"
+                                    Clicked="savePasswordButton_Clicked"
+                                    Text="Save Password"
+                                    TextColor="White"
+                                    BackgroundColor="#4c466c"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    BorderRadius="10"/>
+
+                                <ActivityIndicator WidthRequest="100" Color="#4c466c" IsVisible="False" x:Name="Loader"/>
+                            </StackLayout>
+
+                        </Grid>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+            </ScrollView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

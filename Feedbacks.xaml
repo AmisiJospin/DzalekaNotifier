@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Feedbacks"
+             x:Class="DzalekaNotifierFinal.Feedbacks">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image x:Name="backgroundImage" Opacity="0.9" Aspect="Fill" />
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" x:Name="FeedbackBox" FontSize="30" Text="SEND FEEDBACK" TextColor="#c99e10"  Margin="30,15,30,10" HorizontalOptions="Center" />
+
+                <StackLayout Grid.Row="1" VerticalOptions="Center">
+                    <Entry x:Name="messageBox"
+                        HorizontalOptions="FillAndExpand"
+                        Placeholder="Feedback message here"
+                        HeightRequest="500"
+                        Margin="30,10,30,10"/>
+
+                    <Grid>
+                        <Button x:Name="AddNoticeButton"
+                            Text="Send Feedback"
+                            BackgroundColor="#c99E10"
+                            TextColor="White"
+                            Clicked="AddNoticeButton_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            Margin="30,10,30,10"/>
+
+                        <Image
+                           x:Name="loadingImage"
+                           WidthRequest="100"
+                           HeightRequest="100"
+                           IsVisible="False"
+                           HorizontalOptions="Center" />
+                    </Grid>
+
+                </StackLayout>
+
+                <Label TextColor="#C99e10" 
+                           FontAttributes="Bold" 
+                           Text="© Dzaleka Notifier - 2018" 
+                           FontSize="18" 
+                           HorizontalOptions="Center"
+                           Grid.Row="2" Margin="5" />
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

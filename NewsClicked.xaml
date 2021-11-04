@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Notifications"
+             x:Class="DzalekaNotifierFinal.NewsClicked">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image x:Name="backgroundImage" Opacity="0.30" Aspect="Fill" />
+
+            <ScrollView>
+
+                <StackLayout x:Name="contentHolder" />
+
+            </ScrollView>
+
+
+
+            <ActivityIndicator x:Name="loadingImage" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsRunning="False" IsVisible="False" HorizontalOptions="CenterAndExpand"  />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

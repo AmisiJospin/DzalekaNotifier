@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="DzalekaNotifierFinal.AddNotifications"
+             Title="Add Notification">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+
+                <Image x:Name="myBackgroundImage" Opacity="0.3" Aspect="Fill"/>
+
+              
+                    <StackLayout>
+                    <ScrollView>
+                        <StackLayout VerticalOptions="StartAndExpand">
+                            
+                            <StackLayout Margin="0,10,0,0">
+                                <Label x:Name="RegisterBox" FontSize="Large"  Text="ADD NOTIFICATION" TextColor="#4c466c"
+                           FontAttributes="Bold" HorizontalOptions="Center" />
+                            </StackLayout>
+
+                            <Label Text="Title Notice" Margin="30,10,30,3" TextColor="#4c466c" />
+                            <Entry x:Name="titleBox" 
+                           Placeholder="Title Notfication"                         
+                           Margin="30,5,30,10"
+                           />
+
+                            <Picker x:Name="categoryBox"
+                                Title="Choose Category"
+                                Margin="30,10,30,10"
+                                TextColor="#4c466c"
+                                HorizontalOptions="FillAndExpand">
+                            </Picker>
+
+                            <Label Text="Content Notice" Margin="30,10,30,3" TextColor="#4c466c" />
+
+                            <Editor x:Name="contentBox" 
+                                HeightRequest="140"
+                                Margin="30,5,30,10"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="30,0,30,0">
+                                <Entry Placeholder="Upload File" x:Name="fileName" HorizontalOptions="FillAndExpand"/>
+                                <Button Text="Upload File" BackgroundColor="#4c466c" x:Name="Upload" TextColor="White" Clicked="Upload_Clicked"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid Margin="30,10,30,10" HorizontalOptions="EndAndExpand">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <controls:CircleImage x:Name="imageOfNotice" HorizontalOptions="Center" HeightRequest="70" WidthRequest="70" />
+
+                                    <Button  Grid.Column="1" x:Name="browseFileButton" Text="Browse" BackgroundColor="#4c466c" TextColor="White" Margin="5,0,0,0" Clicked="browseFileButton_Clicked" HorizontalOptions="Center" VerticalOptions="Center" />
+                                </Grid>
+                            </StackLayout>
+
+                        </StackLayout>
+                        
+                </ScrollView>
+                    </StackLayout>
+                <Grid VerticalOptions="EndAndExpand">
+                    <Button x:Name="AddNoticeButton"
+                                Text="Add Notification"
+                                BackgroundColor="#4c466c"
+                                TextColor="White"
+                                Clicked="AddNoticeButton_Clicked"
+                                FontSize="20"
+                                HorizontalOptions="FillAndExpand"
+                                HeightRequest="100"
+                               />
+                    <ActivityIndicator x:Name="loadingImage" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsVisible="False" IsRunning="False" HorizontalOptions="CenterAndExpand" />
+                </Grid>
+            </Grid>
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

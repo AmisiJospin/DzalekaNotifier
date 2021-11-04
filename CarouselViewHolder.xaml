@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             Title="Organization Details"
+             x:Class="DzalekaNotifierFinal.CarouselViewHolder"
+            >
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame>
+                <forms:CarouselView x:Name="CarouselViewPage" BackgroundColor="Transparent" >
+                    <forms:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label Text="{Binding OGName}"/>
+                                <Label Text="{Binding Activity }"/>
+                                <Label Text="{Binding Location }"/>
+                                <Label Text="{Binding Information }"/>
+                            </StackLayout>
+
+                        </DataTemplate>
+                    </forms:CarouselView.ItemTemplate>
+                </forms:CarouselView>
+            </Frame>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

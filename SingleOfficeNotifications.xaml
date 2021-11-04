@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DzalekaNotifierFinal.SingleOfficeNotifications"
+             Title="Notifications"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image x:Name="backgroundImage" Opacity="0.30" Aspect="Fill" />
+
+
+
+            <ScrollView>
+
+                <StackLayout x:Name="containerView" Margin="5">
+
+                </StackLayout>
+
+            </ScrollView>
+
+            <!--<ListView x:Name="notificationsList" Margin="10" ItemSelected="notificationsList_ItemSelected">
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <ViewCell.View>
+
+                                <StackLayout Orientation="Horizontal" Margin="3">
+
+                                    <controls:CircleImage Source="{Binding OrgImage}" WidthRequest="70" HeightRequest="70" />
+
+                                    <Grid x:Name="titleHolder" VerticalOptions="Center" Margin="5">
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Label Grid.Row="0" Text="{Binding Title}" FontSize="20" TextColor="White" />
+
+                                        <Label Grid.Row="1" Text="{Binding Date}" FontSize="12" TextColor="White" />
+
+                                    </Grid>
+
+                                </StackLayout>
+
+                            </ViewCell.View>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+            </ListView>-->
+
+
+            <ActivityIndicator x:Name="loadingImage" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsVisible="False" IsRunning="False" HorizontalOptions="CenterAndExpand" />
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

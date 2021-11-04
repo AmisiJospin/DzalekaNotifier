@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DzalekaNotifierFinal.HelpAdmin"
+             Title="Help"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Image x:Name="backgroundImage" Opacity="0.30" Aspect="Fill" />
+
+            <ScrollView>
+
+                <StackLayout Margin="10,0,10,10">
+
+                    <Label HorizontalOptions="Center" VerticalOptions="Start" Margin="0,0,0,0" FontSize="25" FontAttributes="Bold" Text="Need Help?" TextColor="#4c466c"/>
+
+                    <Label HorizontalOptions="Center" Margin="0,10,0,0" Text="1.	I can't log in - before you use the application make sure you register your organization to the Supreme Admin. " TextColor="White"/>
+                    <Label Text="2.	After signing up, a home page will appear with menu of contents (offices, News, suggestion box and Add Notification" Margin="0,10,0,0" HorizontalOptions="Center" TextColor="White" />
+                    <Label Text="3.	An admin can add notification while a user cannot." Margin="0,10,0,0" HorizontalOptions="Center" TextColor="White" />
+                    <Label Text="4.	If you want to add notification, remember to choose the category of the items you would like to post in the list box." Margin="8,10,34,0" HorizontalOptions="Center" TextColor="White" />
+                    <Label Text="5.	Add a photo to your content you want to send" Margin="8,10,28,0" HorizontalOptions="Center" TextColor="White" />
+                    <Label Text="6.	Forgot my password? " Margin="20,10,0,0" FontAttributes="Bold" HorizontalOptions="Start" TextColor="White" />
+                    <Label Text="Using your Dzaleka notifier ID, mobile number, recovery phone number, or recovery email address. If you forgot your password, be sure to change your password to a strong one that you'll remember after you're in." Margin="40,10,0,0" HorizontalOptions="Center" TextColor="White" />
+                    <Label Text="" Margin="0,10,0,0" HorizontalOptions="Center" TextColor="White" />
+                </StackLayout>
+
+            </ScrollView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

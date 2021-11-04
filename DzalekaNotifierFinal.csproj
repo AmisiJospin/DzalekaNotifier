@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{377DCD14-7455-45EC-A8F6-A16846A0894B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DzalekaNotifierFinal</RootNamespace>
+    <AssemblyName>DzalekaNotifierFinal</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AddNotifications.xaml.cs">
+      <DependentUpon>AddNotifications.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Organisations.xaml.cs">
+      <DependentUpon>Add_Organisations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.xaml.cs">
+      <DependentUpon>AdminHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admins.cs" />
+    <Compile Include="AllSuggestions.xaml.cs">
+      <DependentUpon>AllSuggestions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllUsers.xaml.cs">
+      <DependentUpon>AllUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AskQUestions.xaml.cs">
+      <DependentUpon>AskQUestions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CarouselViewClass.cs" />
+    <Compile Include="CarouselViewHolder.xaml.cs">
+      <DependentUpon>CarouselViewHolder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataConverter.cs" />
+    <Compile Include="Descriptions.xaml.cs">
+      <DependentUpon>Descriptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DescriptProperties.cs" />
+    <Compile Include="DetectorLanguageControler.cs" />
+    <Compile Include="EditOrganisationInfo.xaml.cs">
+      <DependentUpon>EditOrganisationInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Expired.xaml.cs">
+      <DependentUpon>Expired.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.cs" />
+    <Compile Include="Feedbacks.xaml.cs">
+      <DependentUpon>Feedbacks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FireBaseDataManagement.cs" />
+    <Compile Include="ForgotPassword.xaml.cs">
+      <DependentUpon>ForgotPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelpAdmin.xaml.cs">
+      <DependentUpon>HelpAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelpUser.xaml.cs">
+      <DependentUpon>HelpUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageManagement.cs" />
+    <Compile Include="ListOfNotices.xaml.cs">
+      <DependentUpon>ListOfNotices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfOffices.xaml.cs">
+      <DependentUpon>ListOfOffices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoadDataOffline.cs" />
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MoreOfficeDetails.xaml.cs">
+      <DependentUpon>MoreOfficeDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewDetails.xaml.cs">
+      <DependentUpon>NewDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewsChoice.xaml.cs">
+      <DependentUpon>NewsChoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewsClicked.xaml.cs">
+      <DependentUpon>NewsClicked.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationImageSource.cs" />
+    <Compile Include="Notifications.cs" />
+    <Compile Include="OfficeDetails.xaml.cs">
+      <DependentUpon>OfficeDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Offices.xaml.cs">
+      <DependentUpon>Offices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrganisationDetailsPage.xaml.cs">
+      <DependentUpon>OrganisationDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationImageSource.cs" />
+    <Compile Include="OrganizationProperties.cs" />
+    <Compile Include="Organizations.cs" />
+    <Compile Include="PageMessages.xaml.cs">
+      <DependentUpon>PageMessages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionsProperties.cs" />
+    <Compile Include="Recent.xaml.cs">
+      <DependentUpon>Recent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterOrganizations.xaml.cs">
+      <DependentUpon>RegisterOrganizations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterUser.xaml.cs">
+      <DependentUpon>RegisterUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Register_Org_TempClass.cs" />
+    <Compile Include="SendSmsToUsers.cs" />
+    <Compile Include="SingleOfficeNotifications.xaml.cs">
+      <DependentUpon>SingleOfficeNotifications.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Suggestion.cs" />
+    <Compile Include="Temp_String_Services_Class.cs" />
+    <Compile Include="TranslateHelper.cs" />
+    <Compile Include="TranslateTextOnline.cs" />
+    <Compile Include="UserImageSource.cs" />
+    <Compile Include="UserLikes.cs" />
+    <Compile Include="UserQuestions.xaml.cs">
+      <DependentUpon>UserQuestions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs" />
+    <Compile Include="UsersTempInfo.cs" />
+    <Compile Include="UserViews.cs" />
+    <Compile Include="VerificationNumber.xaml.cs">
+      <DependentUpon>VerificationNumber.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSuggestions.xaml.cs">
+      <DependentUpon>ViewSuggestions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSuggestionsAndFeedback.xaml.cs">
+      <DependentUpon>ViewSuggestionsAndFeedback.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\portable-net45+wp80+win8+wpa81\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.FilePicker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.FilePicker.1.1.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.FilePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.FilePicker.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.FilePicker.1.1.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.FilePicker.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.CarouselView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.CarouselView.2.3.0-pre2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.CarouselView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddNotifications.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminHome.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AllSuggestions.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AllUsers.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Descriptions.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Expired.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Feedbacks.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HelpAdmin.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HelpUser.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NewDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NewsChoice.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NewsClicked.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Offices.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PageMessages.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Profile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Recent.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RegisterOrganizations.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RegisterUser.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SingleOfficeNotifications.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UserQuestions.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VerificationNumber.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewSuggestions.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewSuggestionsAndFeedback.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Addition.png" />
+    <EmbeddedResource Include="Images\administrator.png" />
+    <EmbeddedResource Include="Images\Back.png" />
+    <EmbeddedResource Include="Images\Background.png" />
+    <EmbeddedResource Include="Images\communicate.png" />
+    <EmbeddedResource Include="Images\DN Icon.png" />
+    <EmbeddedResource Include="Images\Globe Colored.png" />
+    <EmbeddedResource Include="Images\Globe Notice.png" />
+    <EmbeddedResource Include="Images\Globe.png" />
+    <EmbeddedResource Include="Images\help.png" />
+    <EmbeddedResource Include="Images\LargeTile.scale-100.png" />
+    <EmbeddedResource Include="Images\LargeTile.scale-125.png" />
+    <EmbeddedResource Include="Images\LargeTile.scale-150.png" />
+    <EmbeddedResource Include="Images\LargeTile.scale-200.png" />
+    <EmbeddedResource Include="Images\LargeTile.scale-400.png" />
+    <EmbeddedResource Include="Images\Loading Image.gif" />
+    <EmbeddedResource Include="Images\Loading.gif" />
+    <EmbeddedResource Include="Images\LockScreenLogo.scale-200.png" />
+    <EmbeddedResource Include="Images\message.png" />
+    <EmbeddedResource Include="Images\newz.png" />
+    <EmbeddedResource Include="Images\offices.png" />
+    <EmbeddedResource Include="Images\recents.png" />
+    <EmbeddedResource Include="Images\SmallTile.scale-100.png" />
+    <EmbeddedResource Include="Images\SmallTile.scale-125.png" />
+    <EmbeddedResource Include="Images\SmallTile.scale-150.png" />
+    <EmbeddedResource Include="Images\SmallTile.scale-200.png" />
+    <EmbeddedResource Include="Images\SmallTile.scale-400.png" />
+    <EmbeddedResource Include="Images\Splash sample.png" />
+    <EmbeddedResource Include="Images\SplashScreen.scale-100.png" />
+    <EmbeddedResource Include="Images\SplashScreen.scale-125.png" />
+    <EmbeddedResource Include="Images\SplashScreen.scale-150.png" />
+    <EmbeddedResource Include="Images\SplashScreen.scale-200.png" />
+    <EmbeddedResource Include="Images\SplashScreen.scale-400.png" />
+    <EmbeddedResource Include="Images\Square150x150Logo.scale-100.png" />
+    <EmbeddedResource Include="Images\Square150x150Logo.scale-125.png" />
+    <EmbeddedResource Include="Images\Square150x150Logo.scale-150.png" />
+    <EmbeddedResource Include="Images\Square150x150Logo.scale-200.png" />
+    <EmbeddedResource Include="Images\Square150x150Logo.scale-400.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.scale-100.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.scale-125.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.scale-150.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.scale-200.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.scale-400.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.targetsize-16.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.targetsize-24.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.targetsize-256.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.targetsize-32.png" />
+    <EmbeddedResource Include="Images\Square44x44Logo.targetsize-48.png" />
+    <EmbeddedResource Include="Images\StoreLogo.backup.png" />
+    <EmbeddedResource Include="Images\StoreLogo.scale-100.png" />
+    <EmbeddedResource Include="Images\StoreLogo.scale-125.png" />
+    <EmbeddedResource Include="Images\StoreLogo.scale-150.png" />
+    <EmbeddedResource Include="Images\StoreLogo.scale-200.png" />
+    <EmbeddedResource Include="Images\StoreLogo.scale-400.png" />
+    <EmbeddedResource Include="Images\suggestion.png" />
+    <EmbeddedResource Include="Images\user.png" />
+    <EmbeddedResource Include="Images\Wide310x150Logo.scale-100.png" />
+    <EmbeddedResource Include="Images\Wide310x150Logo.scale-125.png" />
+    <EmbeddedResource Include="Images\Wide310x150Logo.scale-150.png" />
+    <EmbeddedResource Include="Images\Wide310x150Logo.scale-200.png" />
+    <EmbeddedResource Include="Images\Wide310x150Logo.scale-400.png" />
+    <EmbeddedResource Include="OtherImages\Addition.png" />
+    <EmbeddedResource Include="OtherImages\Art.png" />
+    <EmbeddedResource Include="OtherImages\Back.png" />
+    <EmbeddedResource Include="OtherImages\Communication.png" />
+    <EmbeddedResource Include="OtherImages\Education.png" />
+    <EmbeddedResource Include="OtherImages\Globe.png" />
+    <EmbeddedResource Include="OtherImages\Health.png" />
+    <EmbeddedResource Include="OtherImages\help.png" />
+    <EmbeddedResource Include="OtherImages\IGA.png" />
+    <EmbeddedResource Include="OtherImages\newz.png" />
+    <EmbeddedResource Include="OtherImages\offices.png" />
+    <EmbeddedResource Include="OtherImages\recents.png" />
+    <EmbeddedResource Include="OtherImages\Security.png" />
+    <EmbeddedResource Include="OtherImages\SplashNotice.png" />
+    <EmbeddedResource Include="OtherImages\suggestion.png" />
+    <EmbeddedResource Include="OtherImages\user.png" />
+    <EmbeddedResource Include="OtherImages\verification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\lock.png" />
+    <Content Include="key.png" />
+    <Content Include="prof.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CarouselViewHolder.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ForgotPassword.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AskQUestions.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OrganisationDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ListOfNotices.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Add_Organisations.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OfficeDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ListOfOffices.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EditOrganisationInfo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MoreOfficeDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+</Project>

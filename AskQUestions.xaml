@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DzalekaNotifierFinal.AskQUestions"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Image x:Name="backgroungImage" Opacity="0.3" Aspect="Fill" />
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Image HeightRequest="100" WidthRequest="100" HorizontalOptions="CenterAndExpand" x:Name="icon" Margin="0,0,0,20"/>
+                
+                <StackLayout Padding="10">
+                    <Entry x:Name="email" Placeholder="Recent Email Address" />
+                    <Entry x:Name="question1" Placeholder="What Is Your Favorite Pet" Margin="0,20,0,0"/>
+                    <Entry x:Name="question2" Placeholder="What Is Your Favorite Food" Margin="0,20,0,0"/>
+                    <Entry x:Name="question3" Placeholder="What Is Your Favorite Artist" Margin="0,20,0,20"/>
+                   
+                </StackLayout>
+                <Button x:Name="Confirm" Clicked="Confirm_Clicked" Text="Confirm"  HeightRequest="100" FontAttributes="Bold" BackgroundColor="#4c466c" TextColor="White" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DzalekaNotifierFinal.ListOfNotices">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image x:Name="backgroundImage" Opacity="0.30" Aspect="Fill" />
+            <StackLayout>
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Picker x:Name="orgTag" Title="Filter By Organisation Name" Grid.Column="0" SelectedIndexChanged="orgTag_SelectedIndexChanged"/>
+                        <Picker x:Name="categoryTag" Title="Filter By Category." Grid.Column="1" SelectedIndexChanged="categoryTag_SelectedIndexChanged"/>
+                    </Grid>
+                   
+                </StackLayout>
+                <ScrollView>
+
+                    <StackLayout x:Name="containerView" Margin="5">
+
+                    </StackLayout>
+
+                </ScrollView>
+            </StackLayout>
+          
+
+            <ActivityIndicator x:Name="loadingImage" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsVisible="False" IsRunning="False" HorizontalOptions="CenterAndExpand" />
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

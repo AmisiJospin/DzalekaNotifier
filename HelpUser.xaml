@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DzalekaNotifierFinal.HelpUser"
+             Title="Help"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image x:Name="backgroundImage" Opacity="0.30" Aspect="Fill" />
+
+            <Grid>
+                <ScrollView Margin="10,0,10,10">
+
+                    <StackLayout>
+                        <Label Text="Need Help?"  HorizontalOptions="Center" VerticalOptions="Start" Margin="0,0,0,0" FontSize="25" FontAttributes="Bold" TextColor="#4c466c" />
+                        <Label Text="Do you have problems using this Application? Worry not, just follow the instructions below:"  HorizontalOptions="Center" TextColor="#4c466c"/>
+                        <Label  Margin="10,10,0,0" Text="1.	I can't log in_ before you start using the app make sure you create an account" TextColor="#4c466c"/>
+                        <Label  Margin="10,10,31,0" Text="•	Add a photo before clicking the sign up button" TextColor="#4c466c"/>
+                        <Label  Margin="10,10,27,0" Text="•	After signing up, a home page will appear with menu of  contents(offices, News and Recent Notifications and Suggestion box ),  each content represents the activity " TextColor="#4c466c"/>
+                        <Label  Margin="10,10,0,0" Text="•	If you click on Offices, that's where all the offices in the camp are found." TextColor="#4c466c"/>
+                        <Label  Margin="10,10,0,0" Text="•	If you click on Offices, that's where all the offices in the camp are found." TextColor="#4c466c"/>
+                        <Label  Margin="10,10,0,0" Text="•	If a user clicks on News icon, all the news from all the registered offices will appear." TextColor="#4c466c"/>
+                        <Label  Margin="10,10,0,0" Text="•	Under news Feeds, there are also some activities like Education, Health and Sanitation, security, Income Generation Activities, Art and Entertainment and Communication and Community" TextColor="#4c466c"/>
+                        <Label  Margin="10,10,0,0" Text="•	There's also a suggestion box where a user can add comments and suggestions." TextColor="#4c466c"/>
+                        <Label  Margin="10,10,0,0" Text="1.	Forgot my password _ 
+using your Dzaleka notifier ID, mobile number, recovery phone number, or recovery email address. If you forgot your password, be sure to change your password to a strong one that you'll remember after you're in." TextColor="#4c466c"/>
+                        <Label  Margin="10,10,0,0" Text="2.	Can I change someone's Image?
+The display image is part of a Dzaleka notifier  identity, and everyone picks their own image. You can't change or update someone else's photo for them, but you can always View notifications from registered offices." TextColor="#4c466c"/>
+
+                    </StackLayout>
+
+                </ScrollView>
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

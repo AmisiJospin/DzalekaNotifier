@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="DzalekaNotifierFinal.Add_Organisations">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image x:Name="backgroundImage" Opacity="0.3" Aspect="Fill" />
+
+            <ScrollView>
+
+                <StackLayout>
+
+                    <Label x:Name="RegisterBlock" Text="Register An Organisation"
+                       FontSize="28"
+                       TextColor="#4c466c"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" VerticalOptions="Start"
+                       Margin="10,15,10,10"/>
+
+                    <StackLayout VerticalOptions="Center">
+                        <Entry x:Name="NameBox"
+                           Placeholder="Organization Name"
+                            Margin="30,10,30,10"
+                           BackgroundColor="White"/>
+
+                        <Entry x:Name="AdmNameBox" 
+                                 Placeholder="Admin Name"
+                                 Margin="30,10,30,10"  BackgroundColor="White"/>
+
+                        <Entry x:Name="userBox"
+                                 Placeholder="UserName"
+                                 Margin="30,10,30,10"  BackgroundColor="White"/>
+
+                        <Entry x:Name="EmailBox" 
+                                 Placeholder="E-mail Organization"
+                                 Margin="30,10,30,10"  BackgroundColor="White"/>
+
+                        <Entry x:Name="PhoneNumnberBox" 
+                                 Placeholder="Phone Number"
+                                 Margin="30,10,30,10"
+                                 Text="+265"
+                           Keyboard="Telephone"  BackgroundColor="White"/>
+
+                        <Entry x:Name="Adress"
+                                 Placeholder="Adress Of Organisation"
+                                 Margin="30,10,30,10"  BackgroundColor="White"/>
+
+                        <Entry x:Name="PassWord"    
+                           IsPassword="True"
+                            Placeholder="Password"
+                            Margin="30,10,30,10"  BackgroundColor="White"/>
+
+                        <Entry x:Name="PassWord2"      
+                           IsPassword="True"
+                            Placeholder="Confirm Password"
+                            Margin="30,10,30,10"  BackgroundColor="White"/>
+
+                        <Label  Text="Who are they?"  Margin="30,10,30,10"  />
+                        <Editor x:Name="Summary" WidthRequest="150" HeightRequest="200" Margin="30,10,30,10"  BackgroundColor="White"/>
+
+                        <Label x:Name="ActivityTitle" Text="Services We Offer."  Margin="30,10,30,10" />
+                        <!--Addition of Information Or Services-->
+                        <StackLayout x:Name="holderInput" Orientation="Vertical"  HorizontalOptions="FillAndExpand" />
+                        <!--<Button Text="More Bullets" x:Name="moreBullets" HorizontalOptions="CenterAndExpand" Clicked="moreBullets_Clicked" BackgroundColor="#4c466c" TextColor="White" />-->
+                        <Button TextColor="#4c466c" x:Name="AddMore" Clicked="AddMore_Clicked" BackgroundColor="Transparent" Text="Add Service" HorizontalOptions="EndAndExpand" Margin="0,0,30,0" />
+                        
+                        <!--How To Access And Contact information-->
+                        <Label  Text="How To Access Their Services"  Margin="30,10,30,10" />
+                        <Editor x:Name="ServicesAccess" HeightRequest="200" WidthRequest="150" Margin="30,10,30,10"  BackgroundColor="White"/>
+
+                        <Label x:Name="ContactTitle" Text="Contact Details"  Margin="30,10,30,10"  />
+                        <Editor x:Name="Contacts" HeightRequest="200" WidthRequest="150" Margin="30,10,30,10"  BackgroundColor="White"/>
+
+                       
+
+                       
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                            <StackLayout Orientation="Vertical" x:Name="imageAdmin" HorizontalOptions="Center">
+                                <controls:CircleImage x:Name="PictureOfAdmBox" HeightRequest="80" WidthRequest="80" Source="administrator.png" Aspect="AspectFit" />
+                                <Button TextColor="#4c466c" x:Name="adminPic" Clicked="adminPic_Clicked" BackgroundColor="Transparent" Text="Admin's ID" HorizontalOptions="Center" BorderRadius="10" />
+                            </StackLayout>
+
+                            <StackLayout x:Name="ImageLogo" Orientation="Vertical" HorizontalOptions="Center">
+                                <controls:CircleImage x:Name="LogoOfOrgBox" Source="user.png" HeightRequest="80" WidthRequest="80" Aspect="AspectFit" />
+                                <Button TextColor="#4c466c" x:Name="logoOrga" Clicked="logoOrga_Clicked" BackgroundColor="Transparent" Text="Logo" HorizontalOptions="Center" BorderRadius="10"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <Grid VerticalOptions="EndAndExpand">
+                        <Button x:Name="registerButton" Text="Register"
+                                        HorizontalOptions="FillAndExpand"
+                                        BackgroundColor="#4c466c"
+                                        TextColor="White"
+                                        FontSize="20"
+                                        Clicked="registerButton_Clicked"
+                            HeightRequest="100"/>
+                        <ActivityIndicator x:Name="loadingImage" Color="White" WidthRequest="50" HeightRequest="50" IsRunning="False" IsVisible="False" HorizontalOptions="Center" />
+                    </Grid>
+
+                </StackLayout>
+            </ScrollView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

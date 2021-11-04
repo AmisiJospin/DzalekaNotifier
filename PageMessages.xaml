@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Questions"
+             x:Class="DzalekaNotifierFinal.PageMessages">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="All Questions" FontSize="17" HorizontalTextAlignment="Center" />
+
+            <ListView ItemSelected="MyListView_ItemSelected" x:Name="MyListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal" Margin="10,0,0,10">
+                                    <Label Text="{Binding Questions}" FontSize="15" Margin="10,0,10,0"/>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

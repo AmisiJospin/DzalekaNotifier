@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DzalekaNotifierFinal.Login"
+            Title="Login"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="Fill" x:Name="BackImage" Opacity="0.30"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" Grid.Row="0" >
+                    <Grid  Padding="10,10,10,0">
+
+                        <Label Text="Register"  TextColor="#4c466c" FontAttributes="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="register" Tapped="register_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Label Text="Help" HorizontalOptions="EndAndExpand" TextColor="#4c466c" FontAttributes="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="Help" Tapped="Help_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
+
+                    <StackLayout  HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="Connect, Inform, Share" HorizontalOptions="CenterAndExpand"  FontSize="25" TextColor="#4c466c"/>
+                            <Label Text="DzalekaNotifier" FontAttributes="Bold" FontSize="40"  HorizontalTextAlignment="Center" TextColor="#4c466c" HorizontalOptions="Center"/>
+                            <Label Text="Reaching People Wherever They Are!" HorizontalOptions="CenterAndExpand" FontSize="12" FontAttributes="Bold" Margin="0,-7,0,0" TextColor="#4c466c"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+
+
+                <StackLayout   Grid.Row="1" VerticalOptions="End" >
+                    <StackLayout HorizontalOptions="FillAndExpand" Padding="10">
+                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal"   >
+
+                            <Image HeightRequest="20" WidthRequest="20" Source="prof.png" Grid.Column="0"/>
+                            <Entry x:Name="emailBox" Placeholder="Email or Phone Number" Grid.Column="1" HorizontalOptions="FillAndExpand" />
+
+                        </StackLayout>
+
+                        <StackLayout  HorizontalOptions="FillAndExpand" Orientation="Horizontal" >
+
+                            <Image HeightRequest="20" WidthRequest="20" Source="key.png" />
+                            <Entry x:Name="passwordBox"  Placeholder="********"  IsPassword="True" Grid.Column="1" HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+                        <Label FontAttributes="Italic" TextColor="#4c466c" Text="Forgot Password?" Margin="25,0,0,0" x:Name="forgotPass">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="ForgotPassTapped" Tapped="ForgotPassTapped_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+
+                   
+                    <Label x:Name="invalidInputs" Text="Invalid Email / Phone Number or Password" TextColor="Red" HorizontalOptions="Center" IsVisible="False" />
+
+                    <Grid VerticalOptions="EndAndExpand">
+                        <Button x:Name="loginButton" FontSize="20" TextColor="White" BackgroundColor="#4c466c" Text="Log In"   HorizontalOptions="FillAndExpand" Clicked="loginButton_Clicked" HeightRequest="100" FontAttributes="Bold"/>
+                        <ActivityIndicator x:Name="loadingImage" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsVisible="False" IsRunning="False" HorizontalOptions="CenterAndExpand" />
+                    </Grid>
+
+                </StackLayout>
+
+
+                <!--<Label Text="© Dzaleka Notifier - 2018" FontAttributes="Bold" TextColor="#c99e10"  HorizontalOptions="Center" Grid.Row="2" Margin="5" />-->
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+  
+</ContentPage>

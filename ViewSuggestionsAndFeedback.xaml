@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Suggestions and Feedbacks"
+             x:Class="DzalekaNotifierFinal.ViewSuggestionsAndFeedback">
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Image x:Name="backgroundImage" Aspect="Fill" Opacity="0.9"/>
+
+            <StackLayout Grid.Row="1" Margin="10,0,0,10">
+                <Label x:Name=" Viewsuggestions" Text=" View Suggestions" BackgroundColor="White" FontAttributes="Bold" FontSize="20" VerticalOptions="Start" HorizontalOptions="Center" Margin="40,10,0,30"/>
+                <Label Text="Name:" x:Name="UserName" Margin="0,10,0,0" FontAttributes="Bold" TextColor="White" />
+                <Label Text="Phone Number:" x:Name="PhoneNumber" Margin="0,10,0,0" FontAttributes="Bold" TextColor="White" />
+                <Label Text="Address:" x:Name="UserAddress" Margin="0,0,10,20" FontAttributes="Bold" TextColor="White" />
+                <Label Text="Message:" x:Name="SenderMessage" Margin="0,0,10,70" FontAttributes="Bold" TextColor="White" />
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

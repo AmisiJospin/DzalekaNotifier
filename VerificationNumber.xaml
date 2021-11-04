@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Verification Number"
+             x:Class="DzalekaNotifierFinal.VerificationNumber">
+    <ContentPage.Content>
+        <Grid>
+            <Image x:Name="backgroundImage" Opacity="0.3" Aspect="Fill" />
+            <ScrollView>
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label Margin="5" FontSize="20" TextColor="#4c466c" Text="Enter the code you received" HorizontalTextAlignment="Center" Grid.Row="0"  />
+
+
+
+                    <StackLayout VerticalOptions="Center" Margin="30" Padding="10" Grid.Row="1">
+
+                        <Image x:Name="messageLockImage" Margin="0,0,0,20" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Start" />
+
+                        <Entry x:Name="VerifyNumber" Placeholder="Enter the code here..." Keyboard="Telephone" />
+
+                        <Grid>
+
+                            <StackLayout Orientation="Vertical">
+                                <Button Text="Submit" TextColor="White" BackgroundColor="#4c466c" x:Name="submitBtn" Clicked="submitBtn_Clicked" />
+                                <Button Text="Resend Code" TextColor="White" BackgroundColor="#4c466c" x:Name="resendCode" Clicked="resendCode_Clicked" />
+                            </StackLayout>
+
+                            <ActivityIndicator x:Name="loadingImage" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsVisible="False" IsRunning="False" HorizontalOptions="CenterAndExpand" />
+
+                        </Grid>
+
+                    </StackLayout>
+
+                    <Label Text="© Dzaleka Notifier - 2018" TextColor="#4c466c"  Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,5" />
+
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

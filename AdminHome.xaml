@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Admin Home"
+             x:Class="DzalekaNotifierFinal.AdminHome">
+    <ContentPage.Content>
+       
+        <StackLayout Padding="10">
+
+            <Label Text="Admin Home Page" FontAttributes="Bold" TextColor="#4c466c" Margin="10" HorizontalOptions="Center" FontSize="Large"/>
+
+            <StackLayout VerticalOptions="CenterAndExpand" >
+                <Grid>
+                    <Image x:Name="main" Aspect="AspectFill" Opacity="0.3"/>
+                    <ScrollView>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+
+                            <Frame HorizontalOptions="FillAndExpand" OutlineColor="#4c466c" x:Name="AddOrganization"   Grid.Row="0" BackgroundColor="Transparent">
+                                <Grid HorizontalOptions="FillAndExpand">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Grid.Column="0">
+                                        <Image x:Name="addorganizationsIcon" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center"  />
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1">
+                                        <Label Text="Add Organisation" FontAttributes="Bold"   TextColor="#4c466c" FontSize="23" VerticalOptions="Center" />
+                                        <Label Text="Add Or Register Any Organisation That Will Be Working And Sharing Their Notifications In The Camp." TextColor="#454654"   VerticalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+
+
+                            <Frame x:Name="AllOrganizations" Grid.Row="1"  OutlineColor="#4c466c" BackgroundColor="Transparent" >
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image x:Name="allorgback" Aspect="AspectFill" Opacity="0.3"/>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Grid.Column="0" >
+                                        <Image x:Name="allOrganizationsIcon" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" />
+                                    </StackLayout>
+                                    <StackLayout  Grid.Column="1">
+                                        <Label Text="All Organisations" FontAttributes="Bold" TextColor="#4c466c" HorizontalTextAlignment="Start"  FontSize="23" VerticalTextAlignment="Center" />
+                                        <Label Text="Get All Organisations Currently Using The App To Share Information Existing In The Camp" TextColor="#454654"  VerticalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Grid>
+
+                            </Frame>
+
+                            <Frame x:Name="AllUsers" Grid.Row="2"   OutlineColor="#4c466c" BackgroundColor="Transparent">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image x:Name="allusersback" Aspect="AspectFill" Opacity="0.3"/>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Grid.Column="0">
+                                        <Image x:Name="allUsersIcon" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    <StackLayout  Grid.Column="1">
+                                        <Label Text="All Users" FontAttributes="Bold" TextColor="#4c466c" HorizontalTextAlignment="Start"  FontSize="23" VerticalTextAlignment="Center" />
+                                        <Label Text="Check All Registered  Users  Getting Information From The App In The Camp" TextColor="#454654" VerticalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Grid>
+
+                            </Frame>
+
+                            <Frame x:Name="Question" Grid.Row="3"  OutlineColor="#4c466c" BackgroundColor="Transparent">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image x:Name="questionback" Aspect="AspectFill" Opacity="0.3"/>
+
+                                    <StackLayout Orientation="Horizontal" Grid.Column="0">
+                                        <Image x:Name="messageIcon" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1">
+                                        <Label Text="All Users Questions" FontAttributes="Bold" TextColor="#4c466c" HorizontalTextAlignment="Start"  FontSize="23" VerticalTextAlignment="Center"/>
+                                        <Label Text="All Questions Asked By Users To The Organisations" TextColor="#454654"   VerticalTextAlignment="Center"/>
+
+                                    </StackLayout>
+                                </Grid>
+
+                            </Frame>
+
+                            <Frame x:Name="suggestionBox"  Grid.Row="4"  OutlineColor="#4c466c" BackgroundColor="Transparent">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image x:Name="sugesstionBack" Aspect="AspectFill" Opacity="0.3"/>
+                                    <StackLayout Orientation="Horizontal" Grid.Column="0">
+                                        <Image x:Name="suggestionIcon" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" />
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1" >
+                                        <Label Text="Suggestions" FontAttributes="Bold" TextColor="#4c466c" FontSize="23" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                                        <Label Text="All The  Users Suggestions  To The Organisations" TextColor="#454654"  VerticalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Grid>
+
+                            </Frame>
+
+                        </Grid>
+                    </ScrollView>
+                  
+                   
+                </Grid>
+
+
+            </StackLayout>
+
+            <Label TextColor="#4c466c" 
+                            FontAttributes="Bold" 
+                            Text="© Dzaleka Notifier - 2018" 
+                            FontSize="18" 
+                            HorizontalOptions="Center"
+                            VerticalOptions="EndAndExpand"
+                            Grid.Row="5" Margin="5" />
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" x:Name="logout" Clicked="logout_Clicked" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

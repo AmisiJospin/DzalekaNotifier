@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DzalekaNotifierFinal.NewDetails"
+             Title="Notification">
+    <ContentPage.Content>
+        
+        <Grid x:Name="bigGrid">
+                    <Image x:Name="backgroundImage" Opacity="0.3" Aspect="Fill" />
+           
+
+            <StackLayout x:Name="bigStack" IsVisible="False" >
+
+                        <Label x:Name="titleText" FontSize="20" HorizontalOptions="Center" TextColor="#4c466c" Margin="30,10,30,10" />
+
+                        <Label x:Name="dateText" FontSize="14" HorizontalOptions="End" TextColor="#4c466c" Margin="30,5,30,10" />
+                <ScrollView>
+                    <StackLayout>
+                        <Image x:Name="imageNews" HorizontalOptions="CenterAndExpand" Aspect="AspectFit" Margin="30,50,30,10" />
+
+                        <Label x:Name="contentText" FontSize="20" Margin="30,50,30,10" TextColor="#4c466c" />
+
+                        <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="CenterAndExpand">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" x:Name="engTranslator" Text="English" BackgroundColor="#4c466c" IsEnabled="False"  TextColor="White" Clicked="engTranslator_Clicked" HorizontalOptions="CenterAndExpand"  />
+                                <Button Grid.Column="1" x:Name="swTranslator" Text="Swahili" BackgroundColor="#4c466c" IsEnabled="False"  TextColor="White" Clicked="swTranslator_Clicked" Margin="5,0,0,0" HorizontalOptions="CenterAndExpand"  />
+                                <Button Grid.Column="2" x:Name="frTranslator" Text="French" BackgroundColor="#4c466c" IsEnabled="False" TextColor="White" Clicked="frTranslator_Clicked" HorizontalOptions="CenterAndExpand"  />
+
+                            </Grid>
+                            <ActivityIndicator x:Name="langLoader" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsVisible="False" IsRunning="False" HorizontalOptions="CenterAndExpand"/>
+                            <!--<Button x:Name="likeBtn" Margin="5,0,0,0" Text="Like" BackgroundColor="#4c466c" IsEnabled="False" TextColor="White" Clicked="likeBtn_Clicked" HorizontalOptions="EndAndExpand" />-->
+                        </StackLayout>
+
+                        <!--<StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" Padding="10" x:Name="likeAndViewNumber">
+                            <Label x:Name="likeNumbers" IsVisible="False" FontSize="15" TextColor="White" Margin="5" />
+                            <Label x:Name="viewNumbers" IsVisible="False" FontSize="15" TextColor="White" Margin="5" />
+                        </StackLayout>-->
+
+
+
+                        <StackLayout x:Name="theInputStackHolder">
+                            <StackLayout x:Name="suggestionStack" Margin="20" HorizontalOptions="FillAndExpand">
+
+                                <Button TextColor="White" BackgroundColor="#4c466c" FontAttributes="Bold" x:Name="suggestionButton" Text="Suggestion" Clicked="suggestionButton_Clicked" HorizontalOptions="End" />
+                                <Button TextColor="White" BackgroundColor="#4c466c" FontAttributes="Bold" x:Name="viewSuggestionButton" Text="View All Suggestions" Clicked="viewSuggestionButton_Clicked" HorizontalOptions="End" />
+
+                            </StackLayout>
+
+                            <StackLayout x:Name="inputStack" Margin="20"  HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+
+                    </StackLayout>
+                </ScrollView>
+             
+            </StackLayout>
+            <ActivityIndicator x:Name="loadingimageforpage" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsVisible="False"   HorizontalOptions="CenterAndExpand"/>
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

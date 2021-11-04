@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Suggestion"
+             x:Class="DzalekaNotifierFinal.ViewSuggestions">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image x:Name="backgroundImage" Opacity="0.30" Aspect="Fill" />
+
+            <Grid Margin="5">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="4*" />
+                </Grid.ColumnDefinitions>
+
+                <BoxView WidthRequest="1" BackgroundColor="White" VerticalOptions="FillAndExpand" Grid.Column="1"  />
+
+                <!--<ListView Grid.Column="0" Grid.Row="1" x:Name="suggestionsList" ItemSelected="suggestionsList_ItemSelected" />-->
+
+                <ScrollView Grid.Column="0">
+
+                    <StackLayout x:Name="containerView" Margin="5">
+
+                    </StackLayout>
+
+                </ScrollView>
+
+                <ActivityIndicator x:Name="loadingImage" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsVisible="False" IsRunning="False" HorizontalOptions="CenterAndExpand" />
+
+                <ScrollView Grid.Column="2">
+                    <Label x:Name="contentText" Margin="10" TextColor="White" />
+                </ScrollView>
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

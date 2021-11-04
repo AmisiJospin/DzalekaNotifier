@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="All Users"
+             x:Class="DzalekaNotifierFinal.AllUsers">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image x:Name="backgroundImage" Opacity="0.30" Aspect="Fill" />
+
+            <ScrollView>
+
+                <StackLayout x:Name="contentHolder" />
+
+            </ScrollView>
+
+            <!--<ListView x:Name="allUsersGrid" Margin="5" ItemSelected="allUsersGrid_ItemSelected" HorizontalOptions="Center">
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <ViewCell.View>
+
+                                <Grid Margin="10">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                        <controls:CircleImage Source="{Binding ImageUser}" WidthRequest="70" HeightRequest="70" />
+                                   
+
+                                    <Label Grid.Column="1" Text="{Binding Name}" FontSize="20" TextColor="White" VerticalOptions="Center" />
+
+                                </Grid>
+
+                            </ViewCell.View>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>-->
+
+            <ActivityIndicator x:Name="loadingImage" HeightRequest="30" WidthRequest="30" Color="#4c466c" IsVisible="False" IsRunning="False" HorizontalOptions="CenterAndExpand"/>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
