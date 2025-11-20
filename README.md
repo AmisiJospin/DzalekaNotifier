@@ -1,5 +1,3 @@
-# Dzaleka Notifier developed in 2018
+# Dzaleka Notifier
 
-It is cross-platform application developed in Xamarin with C# programming language. 
-It is providing notification via SMS to the community of Dzaleka Refugee Camp about different organizations and other activities that are happening in the camp.
-
+A critical communication platform developed in C# using Xamarin cross-platform technology. This application serves the Dzaleka Refugee Camp community by providing timely notifications about activities, alerts from various organizations, and facilitating essential two-way communication among camp members and external bodies. The inclusion of USSD technology ensures accessibility for users without smartphones or reliable internet
